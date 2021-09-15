@@ -157,3 +157,83 @@ a.extend(b)
 
 ---
 
+## Ⅱ. String Function
+
+### 1. format()
+
+- enables values to be embedded in it, using placeholders.
+- > nums = [4, 5, 6]  
+- msg = "Numbers: {0} {1} {2}".format(nums[0], nums[1], nums[2])  
+
+### 2. count()
+
+- counts the number of characters.
+- > a = "hobby"  
+a.count('b') => 2
+
+### 3. find()
+
+- returns the first index of the string you're looking for.
+- if there is no the string you're looking for, it returns -1.
+- > a = "Python is the best choice"  
+a.find('b')  => 14  
+a.find('k')  => -1  
+
+### 4. index()
+
+- similar with find().
+- However, if there is no the string you're looking for, it occurs error.
+
+### 5. join()
+
+- joins a list of string with another string as a seperator.
+- > ",".join('abcd')  
+'a,b,c,d'
+
+### 6. upper()
+
+- converts lowercase letters into uppercase letters.
+
+### 7. lower()
+
+- converts uppercase letters into lowercase letters.
+
+### 8. lstrip()
+
+- deletes spaces on the left.
+- > a = " hi "  
+a.lstrip()  
+'hi '
+
+### 9. rstrip()
+
+- deletes spaces on the right.
+
+### 10. strip()
+
+- deletes spaces on both sides.
+
+### 11. replace()
+
+- replaces one substring in a string with another
+- > a = "Life is too short"  
+a.replace("Life", "Your leg")  
+'Your leg is too short'
+
+### 12. split()
+
+- The opposite of join, turns a string with a certain separator into a list.
+- Separated strings are returned as a list.
+- > a = "Life is too short"  
+a.split()  <= separates with space  
+['Life', 'is', 'too', 'short']  
+- > b = "a:b:c:d"  
+b.split(':')  <= seperates with ':'  
+['a', 'b', 'c', 'd']
+
+### 13. startswith() endswith()
+
+- determine if there is a substring at the start and end of a string, respectively.
+- return : True or False
+- > print("This is a sentence.".startswith("This"))  
+True
