@@ -72,3 +72,88 @@ print(squares[2:8:3]) // [4, 25]
 ### 4. Negative
 - > squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]  
 print(squares[1:-1]) // 1, 4, 9, 16, 25, 36, 49, 64]  
+
+
+---
+
+# Function
+
+## Ⅰ. List Fuction
+
+### 1. len()
+
+- gets the number of items in a list.
+- You can also use len() on strings to return their length.
+
+### 2. del keyword
+
+- deletes elements from a list.
+- > a = [1, 2, 3, 4, 5]  
+del a[2:]  
+*a = [1, 2]*
+
+### 3. append()
+
+- adds an element at the end of a list.
+- you can add any data types.
+- > a = [1, 2, 3, 4]  
+a.append([5,6])  
+*a= [1, 2, 3, 4, [5, 6]]*
+
+### 4. sort()
+
+- arranges the elements of a list in order.
+
+### 5. reverse()
+
+- turns out the elements of a list in reverse order.
+- not sorting the elements in reverse order, just reversing.
+
+### 6. index()
+
+- index(x) => returns the index with x.
+- if there is no value, error will occur.
+
+### 7. insert()
+
+- insert(a, b) => inserts b into a-th position.
+- > a = [1, 2, 3]  
+a.insert(0, 4)  
+[4, 1, 2, 3]
+
+### 8. remove()
+
+- remove(x) => deletes the first x from a list.
+- if there are multiple values, it deletes only the first one.
+
+### 9. pop()
+
+- pop() => returns the last element of a list and delete it.
+- pop(x) => returns the x-th element one of a list and delete it.
+
+### 10. count()
+
+- returns the number of the elements in a list.
+- count(x) => returns the number of the x elements in a list.
+
+### 11. extend()
+
+- adds a list into a list.
+- extend(x) => x position is only list.
+- > a = [1, 2, 3]  
+a.extend([4, 5])  
+*a = [1, 2, 3, 4, 5]*  
+b = [6, 7]  
+a.extend(b)  
+*a = [1, 2, 3, 4, 5, 6, 7]*  
+
+### 12. max(list)
+
+- returns the maximum value.
+
+### 13. min(list)
+
+- returns the minimum value.
+
+---
+
