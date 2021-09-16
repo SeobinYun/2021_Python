@@ -369,3 +369,31 @@ t1 // (1, 2, 3)
 s1.update([4, 5, 6])
 
 ### 3. remove()
+
+
+---
+
+
+# Bool
+
+- True or False
+- type()
+- > a = True  
+type(a) // <class 'bool'>
+- bool()
+- > bool('python') // True
+
+
+## True and False of data types
+
+|data type|value|T or F|
+|---|---|---|
+|String|"python"|True|
+||""|False|
+|List|[1, 2, 3]|True|
+||[]|False|
+|Tuple|()|False|
+|Dictionary|{}|False|
+|Number|0이 아닌 숫자|True|
+||0|False|
+||None|False|
