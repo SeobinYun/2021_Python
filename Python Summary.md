@@ -268,20 +268,20 @@ t5 = ('a', 'b', ('ab', 'cd'))
 
 ## Ⅱ. function
 
-1. add dictionary key-value pair
+### 1. add dictionary key-value pair
 > a = {1:'a'}  
 > a[2] = 'b'  
 > a = {1:'a', 2:'b'}
 
-2. delete dictionary key-value pair
+### 2. delete dictionary key-value pair
 > del a[1]  
 > // key가 1인 key:value 쌍 삭제
 
-3. get value using key
+### 3. get value using key
 > grade = {'pey': 10, 'julliet': 99}  
 > grade['pey'] // 10
 
-4. keys()
+### 4. keys()
 - key만을 모아서 dict keys 객체 반환
 - 리스트처럼 사용가능, 하지만 리스트 관련 함수(append, insert, pop 등)는 사용 불가능
 - > a = {'name':'pey','phone':'0119993323', 'birth':'1118'}  
@@ -295,25 +295,25 @@ a.keys() // dict_keys(['name', 'phone', 'birth'])
 - > list(a.keys())  
 ['name', 'phone', 'birth']
 
-5. values()
+### 5. values()
 - value만을 모아서 dict_values 객체 반환
 - > a.values() // dict_values(['pey', '0119993323', '1118'])
 
-6. items()
+### 6. items()
 - key와 value의 쌍을 튜플로 묶은 값을 모아서 dic_items 객체 반환
 - > a.items() // dict_items([('name':'pey'), ('phone':'0119993323'), ('birth':'1118')])
 
-7. clear()
+### 7. clear()
 - delete all elements in a dictionary
 - empty dictionary : {}
 
-8. in
+### 8. in
 - check whether the key is in a dictionary
 - If the key is in a dictionary, it returns True.
 - If the key isn't in a dictionary, it returns False. 
 - > 'name' in a // True
 
-9. get()
+### 9. get()
 - key에 대응되는 value() 반환
 - > a.get('name') // 'pey'
 - 존재하지 않은 키 사용 시 None 반환
