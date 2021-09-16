@@ -246,11 +246,77 @@ True
 
 ## Ⅰ. definition
 
-- covers with () and can skip it.
+- covered with () and can skip it.
 - cannot change values.
-- Tuple have to add comma(,) if it has only one element.
+- You have to add comma(,) if tuple has only one element.
 - > t1 = ()  
 t2 = (1,)  
 t3 = (1, 2, 3)  
 t4 = 1, 2, 3  
 t5 = ('a', 'b', ('ab', 'cd'))  
+
+
+---
+
+
+# Dictionary
+
+## Ⅰ. definition
+
+- Associative array or Hash
+- {Key1:Value1, Key2:Value2, Key3:Value3, ...}
+
+## Ⅱ. function
+
+1. add dictionary key-value pair
+> a = {1:'a'}  
+> a[2] = 'b'  
+> a = {1:'a', 2:'b'}
+
+2. delete dictionary key-value pair
+> del a[1]  
+> // key가 1인 key:value 쌍 삭제
+
+3. get value using key
+> grade = {'pey': 10, 'julliet': 99}  
+> grade['pey'] // 10
+
+4. keys()
+- key만을 모아서 dict keys 객체 반환
+- 리스트처럼 사용가능, 하지만 리스트 관련 함수(append, insert, pop 등)는 사용 불가능
+- > a = {'name':'pey','phone':'0119993323', 'birth':'1118'}  
+a.keys() // dict_keys(['name', 'phone', 'birth'])  
+- > for k in a.keys():  
+  print(k)  
+  name  
+  phone  
+  birth
+- dict_keys 객체를 리스트로 변환
+- > list(a.keys())  
+['name', 'phone', 'birth']
+
+5. values()
+- value만을 모아서 dict_values 객체 반환
+- > a.values() // dict_values(['pey', '0119993323', '1118'])
+
+6. items()
+- key와 value의 쌍을 튜플로 묶은 값을 모아서 dic_items 객체 반환
+- > a.items() // dict_items([('name':'pey'), ('phone':'0119993323'), ('birth':'1118')])
+
+7. clear()
+- delete all elements in a dictionary
+- empty dictionary : {}
+
+8. in
+- check whether the key is in a dictionary
+- If the key is in a dictionary, it returns True.
+- If the key isn't in a dictionary, it returns False. 
+- > 'name' in a // True
+
+9. get()
+- key에 대응되는 value() 반환
+- > a.get('name') // 'pey'
+- 존재하지 않은 키 사용 시 None 반환
+- Key값이 없을 경우, default 값을 대신 반환하도록 지정 가능
+- > a.get('foo', 'bar') // 'bar'
+
