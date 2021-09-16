@@ -237,3 +237,20 @@ b.split(':')  <= seperates with ':'
 - return : True or False
 - > print("This is a sentence.".startswith("This"))  
 True
+
+
+---
+
+
+# Tuple
+
+## Ⅰ. definition
+
+- covers with () and can skip it.
+- cannot change values.
+- Tuple have to add comma(,) if it has only one element.
+- > t1 = ()  
+t2 = (1,)  
+t3 = (1, 2, 3)  
+t4 = 1, 2, 3  
+t5 = ('a', 'b', ('ab', 'cd'))  
