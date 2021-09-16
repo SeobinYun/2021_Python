@@ -320,3 +320,52 @@ a.keys() // dict_keys(['name', 'phone', 'birth'])
 - Key값이 없을 경우, default 값을 대신 반환하도록 지정 가능
 - > a.get('foo', 'bar') // 'bar'
 
+
+---
+
+
+# Set
+
+## Ⅰ. properties
+
+- not allow duplication
+- unordered
+- set 자료형은 순서가 없기 떄문에 인덱싱 사용 불가
+- 인덱싱 할려면 list or tuple로 변환 필요
+- > s1 = set([1,2,3])  
+l1 = list(s1)  
+l1 // [1, 2, 3]
+- > t1 = tuple(s1)  
+t1 // (1, 2, 3)
+
+## Ⅱ
+
+### 1. intersection
+
+- & or intersection()
+- > s1 & s2
+- > s1.intersection(s2)
+
+### 2. union
+
+- | or union()
+- > s1 | s2
+- > s1.union(s2)  
+
+### 3. difference set
+
+- - or difference()
+- > s1 - s2
+- > s1.difference(s2)
+
+## Ⅲ. function
+
+### 1. add()
+
+### 2. update()
+
+- 여러 개의 값을 한꺼번에 추가
+- > s1 = set([1, 2, 3])  
+s1.update([4, 5, 6])
+
+### 3. remove()
