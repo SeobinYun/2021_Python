@@ -397,3 +397,57 @@ type(a) // <class 'bool'>
 |Number|0이 아닌 숫자|True|
 ||0|False|
 ||None|False|
+
+
+---
+
+
+# File
+
+## Ⅰ. open()
+
+- 파일 객체 = open(파일 이름, 파일 열기모드)
+
+|파일 열기 모드| |  
+|---|---|  
+|r|읽기 모드 - 파일을 읽기만 할 때 사용|  
+|w|쓰기 모드 - 파일에 내용을 쓸 때 사용|  
+|a|추가 모드 - 파일의 마지막에 새로운 내용을 추가할 때 사용  
+- w로 열면 해당 파일이 이미 존재할 경우 원래 있던 내용이 모두 사라지고, 해당 파일이 존재하지 않으면 새로운 파일이 생성됨
+- > f = open("ex.txt", 'w')  
+f.close()
+
+## Ⅱ. readline()
+
+- 파일의 첫 번째 줄을 읽어 출력
+- 더 이상 읽을 줄이 없는 경우 None을 출력
+- > while True:  
+  line = f.readline()  
+  if not line: break  
+  print(line)  
+f.close()
+- 더 이상 읽을 줄이 없는 경우 None을 출력
+
+## Ⅲ. readlines()
+
+- 파일의 모든 줄을 읽어서 각각의 줄을 요소로 갖는 리스트로 반환
+- ["1번째 줄입니다.", "2번째 줄입니다.", ... ]
+
+## Ⅳ. read()
+
+- 파일의 내용 전체를 문자열로 반환
+- > data = f.read()  
+print(data)
+- > data는 파일의 전체 내용
+
+## Ⅴ. close()
+
+- 파일 객체를 닫아주는 역할
+
+## Ⅵ. with문
+
+- 파일을 열고 닫는 것을 자동으로 처리해주는 문법
+- with 블록을 벗어나는 순간 열린 파일 객체는 자동으로 close됨
+- > with open("ex.txt", "w") as f:  
+ f. write("blahblabhalbhalbhl")
+ 
