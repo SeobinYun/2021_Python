@@ -4,19 +4,22 @@
 
 ### 1. in
 - return: True or False
-- > words = ["spam", "egg", "spam", sausage"]  
+```
+words = ["spam", "egg", "spam", sausage"]  
 print("spam" in words)  
 print("egg" in words)  
 print("tomato" in words)
+```
 
 ### 2. not 
 - return : True or False
-- > nums = [1, 2, 3]  
+```
+nums = [1, 2, 3]  
 print(not 4 in nums)  
 print(4 not in nums)  
 print(not 3 in nums)  
 print(3 not in nums)
-
+```
 
 ---
 
@@ -24,26 +27,32 @@ print(3 not in nums)
 ## Ⅱ. Range
 
 ### 1. By default, it starts from 0, increments by 1 and stops before the specified number.
-- > numbers = list(range(10))  
-- result = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
+```
+numbers = list(range(10))  
+// result = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
 
 
 ### 2. If it's called with two arguments, it'll produce values from the first to the second.
-- > numbers= list(range(3, 8))
-- result = [3, 4, 5, 6, 7]
-
+```
+numbers= list(range(3, 8))
+// result = [3, 4, 5, 6, 7]
+```
 
 ### 3. If it's called with three arguments, it'll produce values from the first to the second stepping the third argument.
-- > numbers = list(range(5, 20, 2))
-- result = [5, 7, 9, 11, 13, 15, 17, 19]
+```
+numbers = list(range(5, 20, 2))
+// result = [5, 7, 9, 11, 13, 15, 17, 19]
+```
 - *we can also create a list of decreasing numbers, using a negative number as the third argument.*
-- > list(range(20, 5, -2))
-
+```
+list(range(20, 5, -2))
+```
 
 ### 4. we can use range object in an for loop
-- > for i in range(5)
-
+```
+for i in range(5)
+```
 
 ---
 
@@ -51,28 +60,35 @@ print(3 not in nums)
 ## Ⅲ. Slices 
 
 ### 1. squares[a:b]
-- > squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]  
+```
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]  
 print(squares[2:6]) // [4, 9, 16, 25]  
 print(squares[3:8]) // [9, 16, 25, 36, 49]  
 print(squares[0:1]) // [0]  
+```
 
 ### 2. squares[:b] or squares[a:]
 - If the first number in a slice is omitted, it's taken to be the start of the list.
 - If the second number is omitted, it's taken to be the end.
-- > squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]    
+```
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]    
 print(squares[:7]) // [0, 1, 4, 9, 16, 25, 36]  
 print(squares[7:]) // [49, 64, 81]  
+```
 
 ### 3. squares[::]
 - a third number represents the step to include only alternate values in the slice.
-- > squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]  
+```
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]  
 print(squares[::2]) // [0, 4, 16, 36, 64]  
 print(squares[2:8:3]) // [4, 25]  
+```
 
 ### 4. Negative
-- > squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]  
+```
+squares = [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]  
 print(squares[1:-1]) // 1, 4, 9, 16, 25, 36, 49, 64]  
-
+```
 
 ---
 
@@ -88,17 +104,21 @@ print(squares[1:-1]) // 1, 4, 9, 16, 25, 36, 49, 64]
 ### 2. del keyword
 
 - deletes elements from a list.
-- > a = [1, 2, 3, 4, 5]  
+```
+a = [1, 2, 3, 4, 5]  
 del a[2:]  
-*a = [1, 2]*
+// a = [1, 2]
+```
 
 ### 3. append()
 
 - adds an element at the end of a list.
 - you can add any data types.
-- > a = [1, 2, 3, 4]  
+```
+a = [1, 2, 3, 4]  
 a.append([5,6])  
-*a= [1, 2, 3, 4, [5, 6]]*
+// a= [1, 2, 3, 4, [5, 6]]
+```
 
 ### 4. sort()
 
@@ -117,9 +137,11 @@ a.append([5,6])
 ### 7. insert()
 
 - insert(a, b) => inserts b into a-th position.
-- > a = [1, 2, 3]  
+```
+a = [1, 2, 3]  
 a.insert(0, 4)  
 [4, 1, 2, 3]
+```
 
 ### 8. remove()
 
@@ -140,12 +162,14 @@ a.insert(0, 4)
 
 - adds a list into a list.
 - extend(x) => x position is only list.
-- > a = [1, 2, 3]  
+```
+a = [1, 2, 3]  
 a.extend([4, 5])  
-*a = [1, 2, 3, 4, 5]*  
+a = [1, 2, 3, 4, 5]  
 b = [6, 7]  
 a.extend(b)  
-*a = [1, 2, 3, 4, 5, 6, 7]*  
+// a = [1, 2, 3, 4, 5, 6, 7]  
+```
 
 ### 12. max(list)
 
@@ -162,22 +186,28 @@ a.extend(b)
 ### 1. format()
 
 - enables values to be embedded in it, using placeholders.
-- > nums = [4, 5, 6]  
-- msg = "Numbers: {0} {1} {2}".format(nums[0], nums[1], nums[2])  
+```
+nums = [4, 5, 6]  
+msg = "Numbers: {0} {1} {2}".format(nums[0], nums[1], nums[2])  
+```
 
 ### 2. count()
 
 - counts the number of characters.
-- > a = "hobby"  
+```
+a = "hobby"  
 a.count('b') => 2
+```
 
 ### 3. find()
 
 - returns the first index of the string you're looking for.
 - if there is no the string you're looking for, it returns -1.
-- > a = "Python is the best choice"  
+```
+a = "Python is the best choice"  
 a.find('b')  => 14  
 a.find('k')  => -1  
+```
 
 ### 4. index()
 
@@ -187,8 +217,10 @@ a.find('k')  => -1
 ### 5. join()
 
 - joins a list of string with another string as a seperator.
-- > ",".join('abcd')  
+```
+",".join('abcd')  
 'a,b,c,d'
+```
 
 ### 6. upper()
 
@@ -201,9 +233,11 @@ a.find('k')  => -1
 ### 8. lstrip()
 
 - deletes spaces on the left.
-- > a = " hi "  
+```
+a = " hi "  
 a.lstrip()  
 'hi '
+```
 
 ### 9. rstrip()
 
@@ -216,28 +250,35 @@ a.lstrip()
 ### 11. replace()
 
 - replaces one substring in a string with another
-- > a = "Life is too short"  
+```
+a = "Life is too short"  
 a.replace("Life", "Your leg")  
 'Your leg is too short'
+```
 
 ### 12. split()
 
 - The opposite of join, turns a string with a certain separator into a list.
 - Separated strings are returned as a list.
-- > a = "Life is too short"  
+```
+a = "Life is too short"  
 a.split()  <= separates with space  
 ['Life', 'is', 'too', 'short']  
-- > b = "a:b:c:d"  
+```
+```
+b = "a:b:c:d"  
 b.split(':')  <= seperates with ':'  
 ['a', 'b', 'c', 'd']
+```
 
 ### 13. startswith() endswith()
 
 - determine if there is a substring at the start and end of a string, respectively.
 - return : True or False
-- > print("This is a sentence.".startswith("This"))  
+```
+print("This is a sentence.".startswith("This"))  
 True
-
+```
 
 ---
 
@@ -249,12 +290,13 @@ True
 - covered with () and can skip it.
 - cannot change values.
 - You have to add comma(,) if tuple has only one element.
-- > t1 = ()  
+```
+t1 = ()  
 t2 = (1,)  
 t3 = (1, 2, 3)  
 t4 = 1, 2, 3  
 t5 = ('a', 'b', ('ab', 'cd'))  
-
+```
 
 ---
 
@@ -269,39 +311,57 @@ t5 = ('a', 'b', ('ab', 'cd'))
 ## Ⅱ. function
 
 ### 1. add dictionary key-value pair
-> a = {1:'a'}  
-> a[2] = 'b'  
-> a = {1:'a', 2:'b'}
+```
+a = {1:'a'}  
+a[2] = 'b'  
+a = {1:'a', 2:'b'}
+```
 
 ### 2. delete dictionary key-value pair
-> del a[1]  
-> // key가 1인 key:value 쌍 삭제
+```
+del a[1]  
+// key가 1인 key:value 쌍 삭제
+```
 
 ### 3. get value using key
-> grade = {'pey': 10, 'julliet': 99}  
-> grade['pey'] // 10
+```
+grade = {'pey': 10, 'julliet': 99}  
+grade['pey'] // 10
+```
 
 ### 4. keys()
 - key만을 모아서 dict keys 객체 반환
 - 리스트처럼 사용가능, 하지만 리스트 관련 함수(append, insert, pop 등)는 사용 불가능
-- > a = {'name':'pey','phone':'0119993323', 'birth':'1118'}  
-a.keys() // dict_keys(['name', 'phone', 'birth'])  
-- > for k in a.keys():  
+```
+a = {'name':'pey','phone':'0119993323', 'birth':'1118'}  
+a.keys() 
+// dict_keys(['name', 'phone', 'birth'])  
+```
+```
+for k in a.keys():  
   print(k)  
   name  
   phone  
   birth
+```
 - dict_keys 객체를 리스트로 변환
-- > list(a.keys())  
+```
+list(a.keys())  
 ['name', 'phone', 'birth']
-
+```
 ### 5. values()
 - value만을 모아서 dict_values 객체 반환
-- > a.values() // dict_values(['pey', '0119993323', '1118'])
+```
+a.values() 
+// dict_values(['pey', '0119993323', '1118'])
+```
 
 ### 6. items()
 - key와 value의 쌍을 튜플로 묶은 값을 모아서 dic_items 객체 반환
-- > a.items() // dict_items([('name':'pey'), ('phone':'0119993323'), ('birth':'1118')])
+```
+a.items() 
+// dict_items([('name':'pey'), ('phone':'0119993323'), ('birth':'1118')])
+```
 
 ### 7. clear()
 - delete all elements in a dictionary
@@ -311,15 +371,23 @@ a.keys() // dict_keys(['name', 'phone', 'birth'])
 - check whether the key is in a dictionary
 - If the key is in a dictionary, it returns True.
 - If the key isn't in a dictionary, it returns False. 
-- > 'name' in a // True
+```
+'name' in a 
+// True
+```
 
 ### 9. get()
 - key에 대응되는 value() 반환
-- > a.get('name') // 'pey'
+```
+a.get('name') 
+// 'pey'
+```
 - 존재하지 않은 키 사용 시 None 반환
 - Key값이 없을 경우, default 값을 대신 반환하도록 지정 가능
-- > a.get('foo', 'bar') // 'bar'
-
+```
+a.get('foo', 'bar') 
+// 'bar'
+```
 
 ---
 
@@ -332,31 +400,42 @@ a.keys() // dict_keys(['name', 'phone', 'birth'])
 - unordered
 - set 자료형은 순서가 없기 떄문에 인덱싱 사용 불가
 - 인덱싱 할려면 list or tuple로 변환 필요
-- > s1 = set([1,2,3])  
+```
+s1 = set([1,2,3])  
 l1 = list(s1)  
 l1 // [1, 2, 3]
-- > t1 = tuple(s1)  
-t1 // (1, 2, 3)
+```
+```
+t1 = tuple(s1)  
+t1 
+// (1, 2, 3)
+```
 
 ## Ⅱ
 
 ### 1. intersection
 
 - & or intersection()
-- > s1 & s2
-- > s1.intersection(s2)
+```
+s1 & s2
+s1.intersection(s2)
+```
 
 ### 2. union
 
 - | or union()
-- > s1 | s2
-- > s1.union(s2)  
+```
+s1 | s2
+s1.union(s2)  
+```
 
 ### 3. difference set
 
 - - or difference()
-- > s1 - s2
-- > s1.difference(s2)
+```
+s1 - s2
+s1.difference(s2)
+```
 
 ## Ⅲ. function
 
@@ -365,8 +444,10 @@ t1 // (1, 2, 3)
 ### 2. update()
 
 - 여러 개의 값을 한꺼번에 추가
-- > s1 = set([1, 2, 3])  
+```
+s1 = set([1, 2, 3])  
 s1.update([4, 5, 6])
+```
 
 ### 3. remove()
 
@@ -378,11 +459,16 @@ s1.update([4, 5, 6])
 
 - True or False
 - type()
-- > a = True  
-type(a) // <class 'bool'>
+```
+a = True  
+type(a) 
+// <class 'bool'>
+```
 - bool()
-- > bool('python') // True
-
+```
+bool('python') 
+// True
+```
 
 ## True and False of data types
 
@@ -414,18 +500,22 @@ type(a) // <class 'bool'>
 |w|쓰기 모드 - 파일에 내용을 쓸 때 사용|  
 |a|추가 모드 - 파일의 마지막에 새로운 내용을 추가할 때 사용  
 - w로 열면 해당 파일이 이미 존재할 경우 원래 있던 내용이 모두 사라지고, 해당 파일이 존재하지 않으면 새로운 파일이 생성됨
-- > f = open("ex.txt", 'w')  
+```
+f = open("ex.txt", 'w')  
 f.close()
+```
 
 ## Ⅱ. readline()
 
 - 파일의 첫 번째 줄을 읽어 출력
 - 더 이상 읽을 줄이 없는 경우 None을 출력
-- > while True:  
+```
+while True:  
   line = f.readline()  
   if not line: break  
   print(line)  
 f.close()
+```
 - 더 이상 읽을 줄이 없는 경우 None을 출력
 
 ## Ⅲ. readlines()
@@ -436,9 +526,11 @@ f.close()
 ## Ⅳ. read()
 
 - 파일의 내용 전체를 문자열로 반환
-- > data = f.read()  
+```
+data = f.read()  
 print(data)
-- > data는 파일의 전체 내용
+// data는 파일의 전체 내용
+```
 
 ## Ⅴ. close()
 
@@ -448,6 +540,69 @@ print(data)
 
 - 파일을 열고 닫는 것을 자동으로 처리해주는 문법
 - with 블록을 벗어나는 순간 열린 파일 객체는 자동으로 close됨
-- > with open("ex.txt", "w") as f:  
+```
+with open("ex.txt", "w") as f:  
  f. write("blahblabhalbhalbhl")
- 
+```
+
+---
+
+
+# Class
+
+``` 
+class FourCal:  
+   def setdata(self, first, second):  
+     self.first = first   
+     self.second = second
+    
+    def add(self):
+      result = self.first + self.second
+      return result
+```
+```
+a = FourCal()
+a.setdata(4, 2)
+// self = a
+// first = 4
+// second = 2
+```
+```
+print(a.add())
+// 6
+```
+
+## Ⅰ. Constructor
+
+- 객체가 생성될 때 자동으로 호출되는 method
+- method name: \_\_init\_\_
+```
+class FourCal:
+  def __init__(self, first, second):
+    self.first = first
+    self.second = second
+```
+- 객체 생성 시 생성자의 매개변수에 해당하는 값을 전달해야 함
+```
+a = FourCal(4, 2)
+```
+
+## Ⅱ. Inheritance
+
+- FourCal class를 상속하는 MoreFourCal class
+```
+class MoreFourCal(FourCal):
+  pass
+```
+- FourCal class를 상속했으므로 FourCal class의 모든 기능 사용 가능
+
+
+---
+
+
+# Module
+
+## Ⅰ. definition
+
+- 함수나 변수 또는 클래스를 모아 놓은 파일
+- 다른 파이썬 프로그램에서 불러와 사용할 수 있게끔 만든 파이썬 파일
