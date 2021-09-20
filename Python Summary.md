@@ -606,3 +606,59 @@ class MoreFourCal(FourCal):
 
 - 함수나 변수 또는 클래스를 모아 놓은 파일
 - 다른 파이썬 프로그램에서 불러와 사용할 수 있게끔 만든 파이썬 파일
+
+## Ⅱ. 불러오기
+
+- import 모듈 이름
+```
+// mod1.py를 저장한 디렉터리: C:\doit
+C:\Users\pahkey>cd C:\doit
+C:\doit>python  // 대화형 인터프리터 실행
+>>>
+>>> import mod1 
+>>> print(mod1.add(3, 4))   // mod1.py 파일에 있는 add 함수를 사용하려면 모듈 이름 뒤에 .를 붙이고 함수이름 입력
+```
+- from 모듈 이름 import 모듈 함수
+```
+from mod1 import add
+add(3, 4)
+7
+```
+```
+from mod1 import add, sub
+```
+```
+from mod1 import *    // 모듈 내의 모든 함수를 불러오겠다는 의미
+```
+
+## Ⅲ. if \_\_name__=="\_\_main\_\_"
+
+- \_\_name\_\_ 변수: 파이썬이 내부적으로 사용하는 특별한 변수
+
+```
+# mod1.py
+def add(a, b):
+  return a+b
+  
+def sub(a, b):
+  return a-b
+   
+if __name__=="__main":
+  print(add(1, 4))
+  print(sub(4, 2))
+```
+
+- python mod1.py와 같이 이 파일을 실행한 경우
+: \_\_name\_\_ 변수에는 \_\_main\_\_ 값이 저장되어 \_\_name\_\_ == "\_\_main\_\_"이 참이 됨
+```
+C:\doit>python mod1.py
+5
+2
+```
+
+- 대화형 인터프리터나 다른 파일에서 이 모듈을 불러서 사용할 경우
+: \_\_name\_\_ 변수에는 모듈 이름 mod1이 저장되어 \_\_name\_\_== "\_\_main\_\_"이 거짓이 됨
+```
+>>> import mod1
+>>>
+```
