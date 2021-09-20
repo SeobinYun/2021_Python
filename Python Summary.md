@@ -662,3 +662,58 @@ C:\doit>python mod1.py
 >>> import mod1
 >>>
 ```
+
+
+---
+
+
+# Package
+
+```
+// 1. C:\doit 디렉터리 밑에 game와 기타 서브 디렉터리 및 .py 파일 생성
+C:\doit\game\__init__.py
+C:\doit\game\sound\__init__.py
+C:\doit\game\sound\echo.py
+C:\doit\game\graphic\__init__.py
+C:\doit\game\graphic\render.py
+
+// 2. 각 디렉터리에 __init__.py 파일 생성 - 내용은 비워둠
+
+// 3. echo.py 파일 생성
+# echo.py
+def echo_test():
+  print("echo")
+  
+// 4. render.py 파일 생성
+# render.py
+def render_test():
+  print("render")
+
+// 5. 생성한 game 패키지를 참조할 수 있도록 명령 프롬프트 창에서 set 명령어로 PYTHONPATH 환경 변수에 C:\doit 디렉터리 추가
+C:\>set PYTHONPATH=C:\doit
+```
+## Ⅰ. 패키지 안 함수 실행하기
+
+### 1. echo 모듈을 import하여 실행
+
+```
+>>> import game.sound.echo
+>>> game.sound.echo.echo_test()
+echo
+```
+
+### 2. echo 모듈이 있는 디렉터리를 from ... import하여 실행
+
+```
+>>> from game.sound import echo
+>>> echo.echo_test()
+echo
+```
+
+### 3. echo 모듈의 echo_test 함수를 직접 import 하여 실행
+
+```
+>>> from game.sound.echo import echo_test
+>>> echo_test
+echo
+```
