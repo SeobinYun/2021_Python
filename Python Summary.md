@@ -879,3 +879,317 @@ except MyError as e:
 // 천사
 // 허용되지 않는 별명입니다.
 ```
+
+
+---
+
+
+# Built-in Function
+
+- import 등 기타 설정없이 바로 사용 가능
+
+### 1. all(x)
+
+- 반복 가능한 자료형 x가 모두 참이면 True, 하나라도 거짓이면 False
+
+```
+>>> all([1, 2, 3])
+True
+>>> all([1, 2, 3, 0])
+False
+```
+
+### 2. abs(x)
+
+- x의 절댓값을 돌려주는 함수
+
+### 3. any(x)
+
+- x가 모두 거짓이면 False, 하나라도 참이면 True
+
+```
+>>> any([1, 2, 3, 0])
+True
+>>> any([0, ""])
+False
+```
+
+### 4. chr(x)
+
+- ASCII 코드를 입력받아 코드에 해당하는 문자 반환
+
+```
+>>> chr(97)
+'a'
+>>> chr(48)
+'0'
+```
+
+### 5. dir(x) 
+
+- 객체가 자체적으로 가지고 있는 변수나 함수 반환
+
+```
+>>> dir([1, 2, 3])
+['append', 'count', 'extend', 'index', ...]
+>>> dir({'1':'a'})
+['clear', 'copy', 'get', 'has_key', 'items', ...]
+```
+
+### 6. dirmod(a, b)
+
+- a를 b로 나눈 몫과 나며지를 튜플 형태로 반환
+
+```
+>>> divmod(7, 3)
+(2, 1)
+```
+
+### 7. enumerate(x)
+
+- 순서가 있는 자료형(리스트, 튜플, 문자열)을 입력으로 받아 인덱스 값을 포함하는 enumerate 객체 반환
+
+```
+for i, name in enumerate(['body', 'foo', 'bar']):
+  print(i, name)
+  
+0 body
+1 foo
+2 bar
+```
+
+### 8. eval(expression)
+
+- 실행 가능한 문자열을 입력으로 받아 문자열을 실행한 결괏값 반환
+- 문자열로 파이썬 함수나 클래스를 동적으로 실행할 때 사용
+
+```
+>>> eval('1+2')
+3
+>>> eval("'hi'+'a'")
+'hia'
+>>> eval('divmod(4, 3)')
+(1, 1)
+```
+
+### 9. filter(f, iterable)
+
+- iterable 자료형의 요소가 함수 f에 입력되었을 때 반환 값이 참인 것만 묶어서 반환
+
+```
+def positive(x):
+  return x>0
+  
+print(list(filter(positive, [1, -3, 2, 0, -5, 6])))
+```
+```
+>>> list(filter(lambda x: x>0, [1, -3, 2, 0, -5, 6]))
+// [1, 2, 6]
+```
+
+### 10. hex(x)
+
+- 정수 값을 입력받아 16진수로 변환
+
+```
+>>> hex(234)
+'0xea'
+```
+
+### 11. id(object)
+
+- 객체의 고유 주소 값 반환
+
+```
+>>> a = 3
+>>> id(3)
+135072304
+>>> id(a)
+135072304
+>>> b = a
+>>> id(b)
+135072304
+```
+
+### 12. input([prompt])
+
+- 사용자 입력을 받는 함수
+- 문자열 인자 생략 가능
+- 매개변수로 문자열을 주면 프롬프트를 띄움
+
+```
+>>> a = input()
+_
+>>> b = input("Enter: ")
+Enter: _
+```
+
+### 13. int(x)
+
+- 문자열 형태의 숫자나 소수점이 있는 숫자 등을 정수 형태로 변환
+
+```
+>>> int('3')
+3
+>>> int(3.4)
+3
+```
+
+- int(x, radix): radix 진수 문자열을 10진수로 변환
+
+```
+>>> int('1A', 16)
+26
+```
+
+### 14. isinstance(object, class)
+
+- object: 인스턴스 / class: 클래스 이름
+- 인스턴스가 클래스의 인스턴스인지 판단하여 참이면 True, 거짓이면 False
+
+```
+>>> class Person: pass
+...
+>>> a = Person()
+>>> isinstance(a, Person)
+True
+>>> b = 3
+>>> isinstance(b, Person)
+False
+```
+
+### 15. len(x)
+
+- 입력값의 길이(요소의 전체 개수) 반환
+
+### 16. list(iterable)
+
+- iterable 자료형을 리스트로 변환
+
+```
+>>> list("python")
+['p', 'y', 't', 'h', 'o', 'n']
+>>> list((1, 2, 3))
+[1, 2, 3]
+```
+
+### 17. map(f, iterable)
+
+- iterable 자료형의 각 요소를 함수 f가 수행한 결과를 묶어서 반환
+
+```
+>>> def two_times(x): return x*2
+...
+>>> list(map(two_times, [1, 2, 3, 4]))
+[2, 4, 6, 8]
+```
+```
+>>> list(map(lambda a: a*2, [1, 2, 3, 4]))
+[2, 4, 6, 8]
+```
+
+### 18. max(iterable)
+
+- iterable 자료형의 최댓값 반환
+
+### 19. min(iterable)
+
+- iterable 자료형의 최솟값 반환
+
+### 20. oct(x) 
+
+- 정수 형태의 숫자를 8진수 문자열로 변환
+
+```
+>>> oct(34)
+'0o42'
+```
+
+### 21. ord(c)
+
+- 문자의 아스키 코드 값 반환
+
+```
+>>> ord('a')
+97
+```
+
+### 22. pow(x, y)
+
+- x의 y 제곱한 결괏값 반환
+
+```
+>>> pow(2, 4)
+16
+```
+
+### 23. round(number[, ndigits])
+
+- 숫자를 입력받아 반올림
+- ndigits는 반올림하여 표시하고 싶은 소수점의 자릿수
+
+```
+>>> round(4.6)
+5
+>>> round(5.678, 2)
+5.68
+```
+
+### 24. sorted(iterable)
+
+- 입력값을 정렬한 후 그 결과를 리스트로 반환
+
+```
+>>> sorted([3, 1, 2])
+[1, 2, 3]
+>>> sorted(['a', 'c', 'b'])
+['a', 'b', 'c']
+>>> sorted("zero")
+['e', 'o', 'r', 'z']
+```
+
+### 25. str(object)
+
+- 객체를 문자열 형태로 변환
+
+```
+>>> str('hi'.upper())
+'HI'
+```
+
+### 26. sum(iterable)
+
+- 리스트나 튜플의 모든 요소의 합 반환
+
+### 27. tuple(iterable)
+
+- iterable 자료형을 튜플 형태로 변환
+
+```
+tuple("abc")
+('a', 'b', 'c')
+```
+
+### 28. type(object)
+
+- 입력값의 자료형 반환
+
+```
+>>> type("abc")
+<class 'str'>
+>>> type([])
+<class 'list'>
+>>> type(open("test", 'w'))
+<class '_io.TextIOWrapper'>
+```
+
+### 29. zip(\*iterable)
+
+- 동일한 개수로 이루어진 자료형을 묶어주는 역할
+
+```
+>>> list(zip([1, 2, 3], [4, 5, 6]))
+[(1, 4), (2, 5), (3, 6)]
+>>> list(zip("abc", "def"))
+[('a', 'd'), ('b', 'e'), ('c', 'f')]
+```
