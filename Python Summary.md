@@ -886,9 +886,12 @@ except MyError as e:
 
 # Built-in Function
 
+
 - import 등 기타 설정없이 바로 사용 가능
 
+
 ### 1. all(x)
+
 
 - 반복 가능한 자료형 x가 모두 참이면 True, 하나라도 거짓이면 False
 
@@ -899,11 +902,15 @@ True
 False
 ```
 
+
 ### 2. abs(x)
+
 
 - x의 절댓값을 돌려주는 함수
 
+
 ### 3. any(x)
+
 
 - x가 모두 거짓이면 False, 하나라도 참이면 True
 
@@ -914,7 +921,9 @@ True
 False
 ```
 
+
 ### 4. chr(x)
+
 
 - ASCII 코드를 입력받아 코드에 해당하는 문자 반환
 
@@ -925,7 +934,9 @@ False
 '0'
 ```
 
+
 ### 5. dir(x) 
+
 
 - 객체가 자체적으로 가지고 있는 변수나 함수 반환
 
@@ -936,7 +947,9 @@ False
 ['clear', 'copy', 'get', 'has_key', 'items', ...]
 ```
 
+
 ### 6. dirmod(a, b)
+
 
 - a를 b로 나눈 몫과 나며지를 튜플 형태로 반환
 
@@ -945,7 +958,9 @@ False
 (2, 1)
 ```
 
+
 ### 7. enumerate(x)
+
 
 - 순서가 있는 자료형(리스트, 튜플, 문자열)을 입력으로 받아 인덱스 값을 포함하는 enumerate 객체 반환
 
@@ -958,7 +973,9 @@ for i, name in enumerate(['body', 'foo', 'bar']):
 2 bar
 ```
 
+
 ### 8. eval(expression)
+
 
 - 실행 가능한 문자열을 입력으로 받아 문자열을 실행한 결괏값 반환
 - 문자열로 파이썬 함수나 클래스를 동적으로 실행할 때 사용
@@ -972,7 +989,9 @@ for i, name in enumerate(['body', 'foo', 'bar']):
 (1, 1)
 ```
 
+
 ### 9. filter(f, iterable)
+
 
 - iterable 자료형의 요소가 함수 f에 입력되었을 때 반환 값이 참인 것만 묶어서 반환
 
@@ -987,7 +1006,9 @@ print(list(filter(positive, [1, -3, 2, 0, -5, 6])))
 // [1, 2, 6]
 ```
 
+
 ### 10. hex(x)
+
 
 - 정수 값을 입력받아 16진수로 변환
 
@@ -996,7 +1017,9 @@ print(list(filter(positive, [1, -3, 2, 0, -5, 6])))
 '0xea'
 ```
 
+
 ### 11. id(object)
+
 
 - 객체의 고유 주소 값 반환
 
@@ -1011,7 +1034,9 @@ print(list(filter(positive, [1, -3, 2, 0, -5, 6])))
 135072304
 ```
 
+
 ### 12. input([prompt])
+
 
 - 사용자 입력을 받는 함수
 - 문자열 인자 생략 가능
@@ -1024,7 +1049,9 @@ _
 Enter: _
 ```
 
+
 ### 13. int(x)
+
 
 - 문자열 형태의 숫자나 소수점이 있는 숫자 등을 정수 형태로 변환
 
@@ -1042,7 +1069,9 @@ Enter: _
 26
 ```
 
+
 ### 14. isinstance(object, class)
+
 
 - object: 인스턴스 / class: 클래스 이름
 - 인스턴스가 클래스의 인스턴스인지 판단하여 참이면 True, 거짓이면 False
@@ -1058,11 +1087,15 @@ True
 False
 ```
 
+
 ### 15. len(x)
+
 
 - 입력값의 길이(요소의 전체 개수) 반환
 
+
 ### 16. list(iterable)
+
 
 - iterable 자료형을 리스트로 변환
 
@@ -1073,7 +1106,9 @@ False
 [1, 2, 3]
 ```
 
+
 ### 17. map(f, iterable)
+
 
 - iterable 자료형의 각 요소를 함수 f가 수행한 결과를 묶어서 반환
 
@@ -1088,15 +1123,21 @@ False
 [2, 4, 6, 8]
 ```
 
+
 ### 18. max(iterable)
+
 
 - iterable 자료형의 최댓값 반환
 
+
 ### 19. min(iterable)
+
 
 - iterable 자료형의 최솟값 반환
 
+
 ### 20. oct(x) 
+
 
 - 정수 형태의 숫자를 8진수 문자열로 변환
 
@@ -1105,7 +1146,9 @@ False
 '0o42'
 ```
 
+
 ### 21. ord(c)
+
 
 - 문자의 아스키 코드 값 반환
 
@@ -1114,7 +1157,9 @@ False
 97
 ```
 
+
 ### 22. pow(x, y)
+
 
 - x의 y 제곱한 결괏값 반환
 
@@ -1123,7 +1168,9 @@ False
 16
 ```
 
+
 ### 23. round(number[, ndigits])
+
 
 - 숫자를 입력받아 반올림
 - ndigits는 반올림하여 표시하고 싶은 소수점의 자릿수
@@ -1135,7 +1182,9 @@ False
 5.68
 ```
 
+
 ### 24. sorted(iterable)
+
 
 - 입력값을 정렬한 후 그 결과를 리스트로 반환
 
@@ -1148,7 +1197,9 @@ False
 ['e', 'o', 'r', 'z']
 ```
 
+
 ### 25. str(object)
+
 
 - 객체를 문자열 형태로 변환
 
@@ -1157,11 +1208,15 @@ False
 'HI'
 ```
 
+
 ### 26. sum(iterable)
+
 
 - 리스트나 튜플의 모든 요소의 합 반환
 
+
 ### 27. tuple(iterable)
+
 
 - iterable 자료형을 튜플 형태로 변환
 
@@ -1170,7 +1225,9 @@ tuple("abc")
 ('a', 'b', 'c')
 ```
 
+
 ### 28. type(object)
+
 
 - 입력값의 자료형 반환
 
@@ -1183,7 +1240,9 @@ tuple("abc")
 <class '_io.TextIOWrapper'>
 ```
 
+
 ### 29. zip(\*iterable)
+
 
 - 동일한 개수로 이루어진 자료형을 묶어주는 역할
 
@@ -1193,3 +1252,432 @@ tuple("abc")
 >>> list(zip("abc", "def"))
 [('a', 'd'), ('b', 'e'), ('c', 'f')]
 ```
+
+
+---
+
+
+# Library
+
+
+## Ⅰ. sys
+
+
+- 파이썬 인터프리터가 제공하는 변수와 함수를 직접 제어할 수 있게 해주는 모듈
+
+
+### 1. sys.argv - 명령 행에서 인수 전달하기
+
+
+```
+C:\User\home>python test.py abc pey guidp
+```
+
+- 명령 프롬프트 창에서 .py 뒤에 또 다른 값을 함께 넣어주면 sys.argv 리스트에 그 값이 추가됨.
+
+```
+# argv_test.py
+import sys
+print(sys.argv)
+```
+```
+# 명령 프롬프트 창에서 argv_test.py 실행
+C:/doit/Mymod>python argv_tset.py you need python
+['argv_tset.py', 'you', 'need', 'python']
+```
+
+- python 명령어 뒤의 입력 값이 공백을 기준으로 나뉘어 sys.argv 리스트의 요소가 됨.
+
+
+### 2. sys.exit - 강제로 스크립트 종료
+
+
+```
+>>> sys.exit()
+```
+
+- 프로그램 파일 안에서 사용하면 프로그램을 중단시킴.
+- ctrl+z나 ctrl+d를 눌러서 대화형 인터프리터를 종료하는 것과 같은 기능.
+
+
+### 3. sys.path - 자신이 만든 모듈 불러와 사용하기
+
+
+- 파이썬 모듈들이 저장되어 있는 위치를 나타냄.
+- 이 위치에 있는 파이썬 모듈은 경로에 상관없이 어디에서나 불러올 수 있음.
+
+[image](https://user-images.githubusercontent.com/54767707/136689705-ea702049-6d2e-4bdb-b5aa-8a4e45d64247.png)
+
+- 경로 이름을 추가하면, 해당 경로에 있는 파이썬 모듈을 불러와서 사용 가능.
+
+```
+import sys
+sys.path.append("C:\doit\Mymod")
+```
+
+
+## Ⅱ. pickle
+
+
+- 객체의 형태를 그대로 유지하면서 파일에 저장하고 불러올 수 있게 하는 모듈
+
+
+### 1. pickle.dump
+
+
+- 딕셔너리 객체를 그대로 파일에 저장
+
+```
+>>> import pickle
+>>> f = open{"test.txt", 'wb'}
+>>> data = {1: 'python', 2: 'you need'}
+>>> pickle.dump(data, f)
+>>> f.close()
+```
+
+
+### 2. pickle.load
+
+
+- pickle.dump로 저장한 파일을 원래 딕셔너리 객체 상태로 불러오기
+
+```
+>>> import pickle
+>>> f = open("test.txt", 'rb')
+>>> data = pickle.load(f)
+>>> print(data)
+{1: 'python', 2: 'you need'}
+```
+
+
+---
+
+
+## Ⅲ. OS
+
+
+- OS 모듈은 환경 변수나 디렉터리, 파일 등의 OS 자원을 제어할 수 있게 해주는 모듈
+
+
+### 1. os.environ
+
+
+- 현재 시스템의 환경 변수에 대한 정보를 딕셔너리 객체로 반환
+
+```
+>>> import os
+>>> os.environ
+environ({'PROGRAMFILES': 'C:\\Program Files', 'APPDATA':... 생략...})
+```
+```
+>>> os.environ['PATH']
+'C:\\ProgramData\\Oracle\\Java\\javapath; ... 생략...'
+```
+
+
+### 2. os.chdir
+
+
+- 디렉터리 위치 변경
+
+```
+>>> os.chdir("C:\WINDOWS")
+```
+
+
+### 3. os.getcwd
+
+
+- 현재 디렉터리 위치 반환
+
+```
+>>> os.getcwd()
+'C:\WINDOWS' // 현재 디렉터리 위치
+```
+
+
+### 4. os.system
+
+
+- 시스템 자체의 프로그램이나 기타 명령어를 파이썬에서 호출할 수 있음.
+
+```
+# 현재 디렉터리에서 시스템 명령어 dir 실행
+>>> os.system("dir")
+```
+
+
+### 5. os.popen
+
+
+- 시스템 명령어를 실행한 결과값을 읽기 모드 형태의 파일 객체로 반환
+
+```
+>>> f = os.popen("dir")
+```
+
+
+### 6. os.mkdir(directory)
+
+
+- 디렉터리 생성
+
+
+### 7. os.rmdir(directory)
+
+
+- 디렉터리 삭제
+- 단 디렉터리가 비어 있어야 삭제 가능
+
+
+### 8. os.unlink(filename)
+
+- 파일을 지움.
+
+
+### 9. os.rename(src, dst)
+
+
+- src라는 이름의 파일을 dst라는 이름으로 바꿈.
+
+
+## Ⅳ. shutil
+
+- 파일을 복사해주는 파이썬 모듈
+- src라는 이름의 파일을 dst로 복사
+- dst가 디렉터리 이름이면 src라는 파일 이름으로 dst 디렉터리에 복사
+- 동일한 파일 이름이 있을 경우에는 덮어 씀
+
+```
+>>> import shutil
+>>> shutil.copy("src.txt", "dst.txt")
+```
+
+
+## Ⅴ. glob
+
+- 특정 디렉터리에 있는 파일들을 리스트로 반환
+- \*, ? 등 메타 문자를 써서 원하는 파일만 읽어들일 수 있음
+
+```
+# C:\doit 디렉터리에 있는 파일 중 이름이 mark로 시작하는 파일 모두 찾기
+
+>>> import glob
+>>> glob.glob("c:\doit\mark*")
+['c:\doit\marks1.py', ...]
+```
+
+
+## Ⅵ. tempfile
+
+
+- 파일을 임시로 만들어서 사용
+
+
+### 1. tempfile.mkstemp
+
+
+- 중복되지 않은 임시 파일의 이름을 무작위로 생성하여 반환
+
+
+```
+>>> import tempfile
+>>> filename = tempfile.mkstemp()
+>>> filename
+'C:\WINDOWS\TEMP\~~275151-0'
+```
+
+
+### 2. tempfile.TemporaryFile
+
+
+- 임시 저장 공간으로 사용할 파일 객체 반환
+- 기본적으로 wb 모드
+- f.close()가 호출되면 파일 객체는 자동으로 사라짐
+
+```
+>>> import tempfile
+>>> f = tempfile.TemporaryFile()
+>>> f.close()  // 생성한 임시 파일이 자동으로 삭제됨
+```
+
+
+## Ⅶ. time
+
+
+### 1. time.time
+
+
+- UTC를 사용하여 현재 시간을 실수 형태로 반환
+
+```
+# 1970년 1월 1일 0시 0분 0초를 기준으로 지난 시간을 초 단위로 반환
+>>> import time
+>>> time.time()
+988458015.73417199
+```
+
+
+### 2. time.localtime
+
+
+- time.time()이 돌려준 실수 값을 사용하여 연도, 월, 일, 시, 분, 초, ...의 형태로 반환
+
+```
+>>> time.localtime(time.time())
+time.struct_time(tm_year=2013, tm_mon=5, tm_mday=21,...
+```
+
+
+### 3. time.asctime
+
+
+- time.localtime에서 반환된 튜플 값을 인수로 받아서 날짜와 시간을 알아보기 쉬운 형태로 반환
+
+```
+>>> time.asctime(time.localtime(time.time()))
+'Sat Apr 28 20:50:20 2001'
+```
+
+
+### 4. time.ctime
+
+
+- 현재 시간 반환
+
+```
+>>> time.ctime()
+'현재 시간'
+```
+
+
+### 5. time.strftime
+
+
+- 시간에 관계된 것을 세밀하게 표현하는 여러 가지 포맷 코드 제공
+
+```
+time.strftime('출력할 형식 포맷 코드', time.localtime(time.time()))
+```
+```
+>>> import time
+>>> time.strftime('%x', time.localtime(time.time()))
+'05/01/0'
+>>> time.strftime('%c', time.localtime(time.time()))
+'05/01/01 17:22:21'
+```
+
+
+### 6. time.sleep
+
+
+- 주로 루프 안에서 많이 사용
+- 일정한 시간 간격을 두고 루프를 실행할 수 있음
+- 인수는 실수 형태 ex) 1이면 1초, 0.5면 0.5초
+
+```
+# 1초 간격으로 0부터 9까지의 숫자 출력
+
+import time
+for i in range(10):
+  print(i)
+  time.sleep(1)
+```
+
+
+## Ⅷ. calendar
+
+
+### 1. calendar.calendar(연도)
+
+
+- 그해의 전체 달력 출력
+
+```
+>>> import calendar
+>>> print(calendar.calendar(2014))
+```
+
+
+### 2. calendar.prcla(연도)
+
+
+- calendar.calendar과 같은 결과
+
+
+### 3. calendar.weekday(연도, 월, 일)
+
+
+- weekday(연도, 월, 일) 함수는 그 날짜에 해당하는 요일 정보 반환
+- 월~일은 0~6이라는 값으로 반환
+
+```
+>>> calendar.weekday(2015, 12, 31)
+3
+```
+
+
+### 4. calendar.monthrange(연도, 월)
+
+
+- 입력받은 달의 1일이 무슨 요일인지와 그 달이 며칠까지 있는지 튜플 형태로 반환
+
+```
+>>> calendar.monthrange(2015, 12)
+(1, 31)
+```
+
+
+## Ⅸ. random
+
+
+- 난수를 발생시키는 모듈
+
+
+### 1. random.random
+
+
+```
+# 0.0에서 1.0 사이의 실수 중 난수 생성
+
+>>> import random
+>>> random.random()
+```
+
+
+### 2. random.randint
+
+```
+# 1에서 10 사이의 정수 중 난수 생성
+
+>>> random.randint(1, 10)
+6
+```
+
+
+### 3. random.shuffle
+
+
+- 리스트 항목 무작위로 섞는 함수
+
+```
+>>> import random
+>>> data = [1, 2, 3, 4, 5]
+>>> random.shuffle(data)
+>>> data
+[5, 1, 3, 4, 2]
+```
+
+
+## Ⅹ. webbrowser
+
+- 자신의 시스템에서 사용하는 기본 웹 브라우저를 자동으로 실행하는 모듈
+
+```
+# 웹 브라우저를 자동으로 실행하고 해당 URL인 google.com으로 이동
+
+>>> import webbrowser
+>>> webbrowser.open("http://google.com")
+```
+
+
