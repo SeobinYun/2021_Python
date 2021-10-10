@@ -1680,4 +1680,12 @@ for i in range(10):
 >>> webbrowser.open("http://google.com")
 ```
 
+- open 함수는 웹 브라우저가 이미 실행된 상태라면 주소로 이동하고, 실행되지 않은 상태라면 새로 우베 브라우저를 실행한 후 해당 주소로 이동
+- open_new 함수는 이미 웹 브라우저가 실행된 상태이더라도 새로운 창으로 해당 주소가 열림
+
+```
+>>> webbrowser.open_new("http://google.com")
+```
+
+
 
